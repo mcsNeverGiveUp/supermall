@@ -1,12 +1,13 @@
 import originAxios from 'axios'
 
+
 export default function axios(option) {
 
   return new Promise((resolve, reject) => {
     //创建axios的实例
     const instance  = originAxios.create({
-      baseURL: 'http://123.207.32.32:8000',
-      timeout: 5000
+      baseURL: '接口加老师微信coderwhy',
+      timeout: 900
     });
     //配置请求和响应拦截
     instance.interceptors.request.use(config => {
@@ -18,7 +19,7 @@ export default function axios(option) {
     })
 
     instance.interceptors.response.use(response => {
-      console.log(response.data);
+     /* console.log(response.data);*/
       return response.data
     },err => {
       console.log('来到了response拦截器的error方法');
