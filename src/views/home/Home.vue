@@ -10,6 +10,7 @@
     <tab-control @itemClick="tabClick"
                  :titles="['流行', '新款', '精选']"
                  ref="tabControl" class="tab-control"></tab-control>
+    <goods-list :goodsList="showGoodsList"></goods-list>
     <div style="height: 1000px"></div>
   </div>
 </template>
@@ -21,7 +22,8 @@
   import RecommendView from "./childComps/RecommendView";
 
   import NavBar from "components/common/navbar/NavBar";
-  import TabControl from "../../components/content/tabControl/TabControl";
+  import TabControl from "components/content/tabControl/TabControl";
+  import GoodsList from "components/content/goods/GoodsList";
 
   import {getHomeMultidata, getHomeData, RECOMMEND, BANNER} from "network/home";
 
@@ -32,6 +34,7 @@
     components: {
       NavBar,
       TabControl,
+      GoodsList,
       HomeSwiper,
       FeatureView,
       RecommendView
@@ -41,15 +44,17 @@
         banners: [],
         recommends: [],
         goodsList: {
-          'pop': {page: 1, List: []},
-          'new': {page: 1, List: []},
-          'sell': {page: 1, List:[]}
+          'pop': {page: 1, list: []},
+          'new': {page: 1, list: []},
+          'sell': {page: 1, list:[]}
         },
         currentType: POP,
       }
     },
     computed: {
-
+      showGoodsList(){
+        return this.goodsList[this.currentType].list
+      }
     },
     created() {
       console.log('创建Home');
@@ -97,7 +102,7 @@
           console.log(res);
           const goodsList = res.data.list;
           /*push函数 可变参数 也是结构的思想 把数组传进去再追加到数组中*/
-          this.goodsList[type].List.push(...goodsList)
+          this.goodsList[type].list.push(...goodsList)
           this.goodsList[type].page += 1
         })
       }

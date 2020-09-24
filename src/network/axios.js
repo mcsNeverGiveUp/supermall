@@ -6,7 +6,7 @@ export default function axios(option) {
   return new Promise((resolve, reject) => {
     //创建axios的实例
     const instance  = originAxios.create({
-      baseURL: '接口加老师微信coderwhy',
+      baseURL: '',
       timeout: 900
     });
     //配置请求和响应拦截
