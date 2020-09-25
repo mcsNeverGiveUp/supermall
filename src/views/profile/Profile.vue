@@ -1,16 +1,27 @@
 <template>
   <div>
-    <h2>我的个人</h2>
-    <p>他一开始没出来也不报错 我淦🤬</p>
+    <nav-bar class="nav-bar">
+      <div slot="center">小咕咕商城</div>
+    </nav-bar>
   </div>
 </template>
 
 <script>
+  import NavBar from "components/common/navbar/NavBar";
+
   export default {
-    name: "Profile"
+    name: "Profile",
+    components: {
+      NavBar
+    }
+
   }
 </script>
 
 <style scoped>
-
+  .nav-bar {
+    background-color: var(--color-tint);
+    font-weight: 700;
+    color: #fff;
+  }
 </style>

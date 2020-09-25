@@ -3,15 +3,26 @@
     <nav-bar class="nav-bar">
       <div slot="center">购 物 街</div>
     </nav-bar>
-
-    <home-swiper :banners="banners" ref="hSwiper"></home-swiper>
-    <feature-view :features="recommends"></feature-view>
-    <recommend-view></recommend-view>
     <tab-control @itemClick="tabClick"
                  :titles="['流行', '新款', '精选']"
-                 ref="tabControl" class="tab-control"></tab-control>
-    <goods-list :goodsList="showGoodsList"></goods-list>
-    <div style="height: 1000px"></div>
+                 class="fixed" v-show="isTabFixed" ref="tabHide"></tab-control>
+  <scroll class="content" ref="scroll"
+          @scroll="contentScroll" @pullingUp="loadMore"
+          :data="showGoodsList" :pull-up-load="true" :probe-type="3">
+    <div>
+      <home-swiper :banners="banners" ref="hSwiper"></home-swiper>
+      <feature-view :features="recommends"></feature-view>
+      <recommend-view></recommend-view>
+      <tab-control @itemClick="tabClick"
+                   :titles="['流行', '新款', '精选']"
+                   ref="tabControl"></tab-control>
+      <goods-list :goodsList="showGoodsList"></goods-list>
+    </div>
+    <back-top class="back-top" @backTop="backTop" v-show="showBackTop">
+      <img src="~assets/img/common/top.png" alt="">
+    </back-top>
+  </scroll>
+
   </div>
 </template>
 
@@ -21,23 +32,27 @@
   import FeatureView from "./childComps/FeatureView";
   import RecommendView from "./childComps/RecommendView";
 
+  import Scroll from 'common/scroll/Scroll'
   import NavBar from "components/common/navbar/NavBar";
   import TabControl from "components/content/tabControl/TabControl";
   import GoodsList from "components/content/goods/GoodsList";
+  import BackTop from "components/content/backTop/backTop";
 
   import {getHomeMultidata, getHomeData, RECOMMEND, BANNER} from "network/home";
 
-  import {POP,SELL,NEW} from "@/common/const";
+  import {POP,SELL,NEW,BACKTOP_DISTANCE} from "@/common/const";
 
   export default {
     name: "Home",
     components: {
       NavBar,
+      Scroll,
       TabControl,
       GoodsList,
       HomeSwiper,
       FeatureView,
-      RecommendView
+      RecommendView,
+      BackTop
     },
     data() {
       return {
@@ -49,6 +64,9 @@
           'sell': {page: 1, list:[]}
         },
         currentType: POP,
+        isTabFixed: false,
+        tabOffsetTop: 540,
+        showBackTop:false
       }
     },
     computed: {
@@ -82,9 +100,12 @@
           console.log(res);
           this.banners = res.data[BANNER].list
           this.recommends = res.data[RECOMMEND].list
+
         })
       },
       tabClick: function (index) {
+        this.$refs.tabHide.$data.currentIndex = index;
+        this.$refs.tabControl.$data.currentIndex = index;
         switch (index) {
           case 0:
             this.currentType = POP
@@ -97,13 +118,31 @@
             break
         }
       },
+      contentScroll(position) {
+        //决定 tabFixed是否显示
+        this.isTabFixed = position.y < -this.tabOffsetTop
+
+
+        // 决定backTop是否显示
+        this.showBackTop = position.y < -BACKTOP_DISTANCE
+      },
+      loadMore() {
+        this.getHomeProducts(this.currentType)
+      },
+      backTop() {
+        console.log("回到顶部");
+        this.$refs.scroll.scrollTo(0,0,600)
+      },
       getHomeProducts(type) {
         getHomeData(type, this.goodsList[type].page).then(res => {
           console.log(res);
+          console.log(this.goodsList[type].page);
           const goodsList = res.data.list;
           /*push函数 可变参数 也是结构的思想 把数组传进去再追加到数组中*/
           this.goodsList[type].list.push(...goodsList)
           this.goodsList[type].page += 1
+          //完成此次的上拉加载后 未下次下拉加载准备
+          this.$refs.scroll.finishPullUp()
         })
       }
 
@@ -113,7 +152,8 @@
 
 <style scoped>
   #home {
-    padding-top: 44px;
+    /*padding-top: 44px;*/
+    height: 100vh;
   }
   .nav-bar {
     background-color: var(--color-tint);
@@ -125,9 +165,23 @@
     right: 0;
     z-index: 999;
   }
-  .tab-control{
-    /*滚动锁定的css*/
-    position: sticky;
-    top:44px;
+  .content {
+    position: absolute;
+    top: 44px;
+    bottom: 49px;
+    left: 0;
+    right: 0;
+  }
+  .fixed {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    right: 0;
+  }
+  .back-top {
+    position: fixed;
+    bottom: 48px;
+    right: 10px;
+    z-index: 998;
   }
 </style>

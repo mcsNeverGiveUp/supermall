@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2>分类</h2>
-    <ul class="content">
+    <div class="wrapper" ref="aaa">
+     <ul class="content">
      <li>分类1</li>
      <li>分类2</li>
      <li>分类3</li>
@@ -503,6 +504,7 @@
      <li>分类499</li>
      <li>分类500</li>
    </ul>
+    </div>
   </div>
 </template>
 
@@ -510,18 +512,30 @@
   import BScroll from 'better-scroll'
   export default {
     name: "Category",
+    data() {
+      return {
+        bScroll: null
+      }
+    },
+    //组件创建完后创建
     created() {
-      new BScroll('.content')
+
+    },
+    mounted() {
+      this.bScroll = new BScroll(this.$refs.aaa,{
+
+      })
     }
   }
 </script>
 
 <style scoped>
-    .content {
+    .wrapper {
       background-color: #D81E06;
       height: 150px;
 
       overflow: hidden;
-      overflow-y: scroll;
+      /*overflow-y: scroll;*/
     }
+
 </style>

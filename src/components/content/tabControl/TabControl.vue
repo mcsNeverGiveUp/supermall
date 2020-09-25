@@ -28,12 +28,13 @@
     methods: {
       itemClick: function (index) {
         this.currentIndex = index;
-
         this.$emit('itemClick', index)
       }
     }
   }
 </script>
+
+
 
 <style scoped>
   .tab-control {
