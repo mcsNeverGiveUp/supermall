@@ -65,7 +65,7 @@
         },
         currentType: POP,
         isTabFixed: false,
-        tabOffsetTop: 540,
+        tabOffsetTop: 0,
         showBackTop:false
       }
     },
@@ -83,6 +83,7 @@
      this.getHomeProducts(POP)
      this.getHomeProducts(NEW)
      this.getHomeProducts(SELL)
+
     },
     activated() {
       this.$refs.hSwiper.startTimer()
@@ -93,6 +94,13 @@
     updated() {
 
     },
+    mounted() {
+      const refresh = this.debounce(this.$refs.scroll.refresh,600)
+      //调用太频繁 可以使用防抖debounce/节流throttle函数
+      this.$bus.$on('refresh', (msg) =>{
+        refresh(msg)
+      })
+    },
     methods: {
       /*网络请求相关的东西*/
       getMultiData() {
@@ -101,6 +109,11 @@
           this.banners = res.data[BANNER].list
           this.recommends = res.data[RECOMMEND].list
 
+          //每个组件都有$el对象 可以拿到组件内相关属性
+          this.$nextTick(() => {
+            this.tabOffsetTop =this.$refs.tabControl.$el.offsetTop
+            console.log(this.tabOffsetTop);
+          })
         })
       },
       tabClick: function (index) {
@@ -144,6 +157,16 @@
           //完成此次的上拉加载后 未下次下拉加载准备
           this.$refs.scroll.finishPullUp()
         })
+      },
+      debounce(func, delay) {
+        let timer = null;
+        return function (...args) {
+          if(timer) clearTimeout(timer)
+          timer = setTimeout(() => {
+            func.apply(this,args);
+            console.log(args);
+          },delay)
+        }
       }
 
     }
