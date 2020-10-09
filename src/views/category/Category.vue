@@ -1,541 +1,187 @@
 <template>
-  <div>
-    <h2>分类</h2>
-    <div class="wrapper" ref="aaa">
-     <ul class="content">
-     <li>分类1</li>
-     <li>分类2</li>
-     <li>分类3</li>
-     <li>分类4</li>
-     <li>分类5</li>
-     <li>分类6</li>
-     <li>分类7</li>
-     <li>分类8</li>
-     <li>分类9</li>
-     <li>分类10</li>
-     <li>分类11</li>
-     <li>分类12</li>
-     <li>分类13</li>
-     <li>分类14</li>
-     <li>分类15</li>
-     <li>分类16</li>
-     <li>分类17</li>
-     <li>分类18</li>
-     <li>分类19</li>
-     <li>分类20</li>
-     <li>分类21</li>
-     <li>分类22</li>
-     <li>分类23</li>
-     <li>分类24</li>
-     <li>分类25</li>
-     <li>分类26</li>
-     <li>分类27</li>
-     <li>分类28</li>
-     <li>分类29</li>
-     <li>分类30</li>
-     <li>分类31</li>
-     <li>分类32</li>
-     <li>分类33</li>
-     <li>分类34</li>
-     <li>分类35</li>
-     <li>分类36</li>
-     <li>分类37</li>
-     <li>分类38</li>
-     <li>分类39</li>
-     <li>分类40</li>
-     <li>分类41</li>
-     <li>分类42</li>
-     <li>分类43</li>
-     <li>分类44</li>
-     <li>分类45</li>
-     <li>分类46</li>
-     <li>分类47</li>
-     <li>分类48</li>
-     <li>分类49</li>
-     <li>分类50</li>
-     <li>分类51</li>
-     <li>分类52</li>
-     <li>分类53</li>
-     <li>分类54</li>
-     <li>分类55</li>
-     <li>分类56</li>
-     <li>分类57</li>
-     <li>分类58</li>
-     <li>分类59</li>
-     <li>分类60</li>
-     <li>分类61</li>
-     <li>分类62</li>
-     <li>分类63</li>
-     <li>分类64</li>
-     <li>分类65</li>
-     <li>分类66</li>
-     <li>分类67</li>
-     <li>分类68</li>
-     <li>分类69</li>
-     <li>分类70</li>
-     <li>分类71</li>
-     <li>分类72</li>
-     <li>分类73</li>
-     <li>分类74</li>
-     <li>分类75</li>
-     <li>分类76</li>
-     <li>分类77</li>
-     <li>分类78</li>
-     <li>分类79</li>
-     <li>分类80</li>
-     <li>分类81</li>
-     <li>分类82</li>
-     <li>分类83</li>
-     <li>分类84</li>
-     <li>分类85</li>
-     <li>分类86</li>
-     <li>分类87</li>
-     <li>分类88</li>
-     <li>分类89</li>
-     <li>分类90</li>
-     <li>分类91</li>
-     <li>分类92</li>
-     <li>分类93</li>
-     <li>分类94</li>
-     <li>分类95</li>
-     <li>分类96</li>
-     <li>分类97</li>
-     <li>分类98</li>
-     <li>分类99</li>
-     <li>分类100</li>
-     <li>分类101</li>
-     <li>分类102</li>
-     <li>分类103</li>
-     <li>分类104</li>
-     <li>分类105</li>
-     <li>分类106</li>
-     <li>分类107</li>
-     <li>分类108</li>
-     <li>分类109</li>
-     <li>分类110</li>
-     <li>分类111</li>
-     <li>分类112</li>
-     <li>分类113</li>
-     <li>分类114</li>
-     <li>分类115</li>
-     <li>分类116</li>
-     <li>分类117</li>
-     <li>分类118</li>
-     <li>分类119</li>
-     <li>分类120</li>
-     <li>分类121</li>
-     <li>分类122</li>
-     <li>分类123</li>
-     <li>分类124</li>
-     <li>分类125</li>
-     <li>分类126</li>
-     <li>分类127</li>
-     <li>分类128</li>
-     <li>分类129</li>
-     <li>分类130</li>
-     <li>分类131</li>
-     <li>分类132</li>
-     <li>分类133</li>
-     <li>分类134</li>
-     <li>分类135</li>
-     <li>分类136</li>
-     <li>分类137</li>
-     <li>分类138</li>
-     <li>分类139</li>
-     <li>分类140</li>
-     <li>分类141</li>
-     <li>分类142</li>
-     <li>分类143</li>
-     <li>分类144</li>
-     <li>分类145</li>
-     <li>分类146</li>
-     <li>分类147</li>
-     <li>分类148</li>
-     <li>分类149</li>
-     <li>分类150</li>
-     <li>分类151</li>
-     <li>分类152</li>
-     <li>分类153</li>
-     <li>分类154</li>
-     <li>分类155</li>
-     <li>分类156</li>
-     <li>分类157</li>
-     <li>分类158</li>
-     <li>分类159</li>
-     <li>分类160</li>
-     <li>分类161</li>
-     <li>分类162</li>
-     <li>分类163</li>
-     <li>分类164</li>
-     <li>分类165</li>
-     <li>分类166</li>
-     <li>分类167</li>
-     <li>分类168</li>
-     <li>分类169</li>
-     <li>分类170</li>
-     <li>分类171</li>
-     <li>分类172</li>
-     <li>分类173</li>
-     <li>分类174</li>
-     <li>分类175</li>
-     <li>分类176</li>
-     <li>分类177</li>
-     <li>分类178</li>
-     <li>分类179</li>
-     <li>分类180</li>
-     <li>分类181</li>
-     <li>分类182</li>
-     <li>分类183</li>
-     <li>分类184</li>
-     <li>分类185</li>
-     <li>分类186</li>
-     <li>分类187</li>
-     <li>分类188</li>
-     <li>分类189</li>
-     <li>分类190</li>
-     <li>分类191</li>
-     <li>分类192</li>
-     <li>分类193</li>
-     <li>分类194</li>
-     <li>分类195</li>
-     <li>分类196</li>
-     <li>分类197</li>
-     <li>分类198</li>
-     <li>分类199</li>
-     <li>分类200</li>
-     <li>分类201</li>
-     <li>分类202</li>
-     <li>分类203</li>
-     <li>分类204</li>
-     <li>分类205</li>
-     <li>分类206</li>
-     <li>分类207</li>
-     <li>分类208</li>
-     <li>分类209</li>
-     <li>分类210</li>
-     <li>分类211</li>
-     <li>分类212</li>
-     <li>分类213</li>
-     <li>分类214</li>
-     <li>分类215</li>
-     <li>分类216</li>
-     <li>分类217</li>
-     <li>分类218</li>
-     <li>分类219</li>
-     <li>分类220</li>
-     <li>分类221</li>
-     <li>分类222</li>
-     <li>分类223</li>
-     <li>分类224</li>
-     <li>分类225</li>
-     <li>分类226</li>
-     <li>分类227</li>
-     <li>分类228</li>
-     <li>分类229</li>
-     <li>分类230</li>
-     <li>分类231</li>
-     <li>分类232</li>
-     <li>分类233</li>
-     <li>分类234</li>
-     <li>分类235</li>
-     <li>分类236</li>
-     <li>分类237</li>
-     <li>分类238</li>
-     <li>分类239</li>
-     <li>分类240</li>
-     <li>分类241</li>
-     <li>分类242</li>
-     <li>分类243</li>
-     <li>分类244</li>
-     <li>分类245</li>
-     <li>分类246</li>
-     <li>分类247</li>
-     <li>分类248</li>
-     <li>分类249</li>
-     <li>分类250</li>
-     <li>分类251</li>
-     <li>分类252</li>
-     <li>分类253</li>
-     <li>分类254</li>
-     <li>分类255</li>
-     <li>分类256</li>
-     <li>分类257</li>
-     <li>分类258</li>
-     <li>分类259</li>
-     <li>分类260</li>
-     <li>分类261</li>
-     <li>分类262</li>
-     <li>分类263</li>
-     <li>分类264</li>
-     <li>分类265</li>
-     <li>分类266</li>
-     <li>分类267</li>
-     <li>分类268</li>
-     <li>分类269</li>
-     <li>分类270</li>
-     <li>分类271</li>
-     <li>分类272</li>
-     <li>分类273</li>
-     <li>分类274</li>
-     <li>分类275</li>
-     <li>分类276</li>
-     <li>分类277</li>
-     <li>分类278</li>
-     <li>分类279</li>
-     <li>分类280</li>
-     <li>分类281</li>
-     <li>分类282</li>
-     <li>分类283</li>
-     <li>分类284</li>
-     <li>分类285</li>
-     <li>分类286</li>
-     <li>分类287</li>
-     <li>分类288</li>
-     <li>分类289</li>
-     <li>分类290</li>
-     <li>分类291</li>
-     <li>分类292</li>
-     <li>分类293</li>
-     <li>分类294</li>
-     <li>分类295</li>
-     <li>分类296</li>
-     <li>分类297</li>
-     <li>分类298</li>
-     <li>分类299</li>
-     <li>分类300</li>
-     <li>分类301</li>
-     <li>分类302</li>
-     <li>分类303</li>
-     <li>分类304</li>
-     <li>分类305</li>
-     <li>分类306</li>
-     <li>分类307</li>
-     <li>分类308</li>
-     <li>分类309</li>
-     <li>分类310</li>
-     <li>分类311</li>
-     <li>分类312</li>
-     <li>分类313</li>
-     <li>分类314</li>
-     <li>分类315</li>
-     <li>分类316</li>
-     <li>分类317</li>
-     <li>分类318</li>
-     <li>分类319</li>
-     <li>分类320</li>
-     <li>分类321</li>
-     <li>分类322</li>
-     <li>分类323</li>
-     <li>分类324</li>
-     <li>分类325</li>
-     <li>分类326</li>
-     <li>分类327</li>
-     <li>分类328</li>
-     <li>分类329</li>
-     <li>分类330</li>
-     <li>分类331</li>
-     <li>分类332</li>
-     <li>分类333</li>
-     <li>分类334</li>
-     <li>分类335</li>
-     <li>分类336</li>
-     <li>分类337</li>
-     <li>分类338</li>
-     <li>分类339</li>
-     <li>分类340</li>
-     <li>分类341</li>
-     <li>分类342</li>
-     <li>分类343</li>
-     <li>分类344</li>
-     <li>分类345</li>
-     <li>分类346</li>
-     <li>分类347</li>
-     <li>分类348</li>
-     <li>分类349</li>
-     <li>分类350</li>
-     <li>分类351</li>
-     <li>分类352</li>
-     <li>分类353</li>
-     <li>分类354</li>
-     <li>分类355</li>
-     <li>分类356</li>
-     <li>分类357</li>
-     <li>分类358</li>
-     <li>分类359</li>
-     <li>分类360</li>
-     <li>分类361</li>
-     <li>分类362</li>
-     <li>分类363</li>
-     <li>分类364</li>
-     <li>分类365</li>
-     <li>分类366</li>
-     <li>分类367</li>
-     <li>分类368</li>
-     <li>分类369</li>
-     <li>分类370</li>
-     <li>分类371</li>
-     <li>分类372</li>
-     <li>分类373</li>
-     <li>分类374</li>
-     <li>分类375</li>
-     <li>分类376</li>
-     <li>分类377</li>
-     <li>分类378</li>
-     <li>分类379</li>
-     <li>分类380</li>
-     <li>分类381</li>
-     <li>分类382</li>
-     <li>分类383</li>
-     <li>分类384</li>
-     <li>分类385</li>
-     <li>分类386</li>
-     <li>分类387</li>
-     <li>分类388</li>
-     <li>分类389</li>
-     <li>分类390</li>
-     <li>分类391</li>
-     <li>分类392</li>
-     <li>分类393</li>
-     <li>分类394</li>
-     <li>分类395</li>
-     <li>分类396</li>
-     <li>分类397</li>
-     <li>分类398</li>
-     <li>分类399</li>
-     <li>分类400</li>
-     <li>分类401</li>
-     <li>分类402</li>
-     <li>分类403</li>
-     <li>分类404</li>
-     <li>分类405</li>
-     <li>分类406</li>
-     <li>分类407</li>
-     <li>分类408</li>
-     <li>分类409</li>
-     <li>分类410</li>
-     <li>分类411</li>
-     <li>分类412</li>
-     <li>分类413</li>
-     <li>分类414</li>
-     <li>分类415</li>
-     <li>分类416</li>
-     <li>分类417</li>
-     <li>分类418</li>
-     <li>分类419</li>
-     <li>分类420</li>
-     <li>分类421</li>
-     <li>分类422</li>
-     <li>分类423</li>
-     <li>分类424</li>
-     <li>分类425</li>
-     <li>分类426</li>
-     <li>分类427</li>
-     <li>分类428</li>
-     <li>分类429</li>
-     <li>分类430</li>
-     <li>分类431</li>
-     <li>分类432</li>
-     <li>分类433</li>
-     <li>分类434</li>
-     <li>分类435</li>
-     <li>分类436</li>
-     <li>分类437</li>
-     <li>分类438</li>
-     <li>分类439</li>
-     <li>分类440</li>
-     <li>分类441</li>
-     <li>分类442</li>
-     <li>分类443</li>
-     <li>分类444</li>
-     <li>分类445</li>
-     <li>分类446</li>
-     <li>分类447</li>
-     <li>分类448</li>
-     <li>分类449</li>
-     <li>分类450</li>
-     <li>分类451</li>
-     <li>分类452</li>
-     <li>分类453</li>
-     <li>分类454</li>
-     <li>分类455</li>
-     <li>分类456</li>
-     <li>分类457</li>
-     <li>分类458</li>
-     <li>分类459</li>
-     <li>分类460</li>
-     <li>分类461</li>
-     <li>分类462</li>
-     <li>分类463</li>
-     <li>分类464</li>
-     <li>分类465</li>
-     <li>分类466</li>
-     <li>分类467</li>
-     <li>分类468</li>
-     <li>分类469</li>
-     <li>分类470</li>
-     <li>分类471</li>
-     <li>分类472</li>
-     <li>分类473</li>
-     <li>分类474</li>
-     <li>分类475</li>
-     <li>分类476</li>
-     <li>分类477</li>
-     <li>分类478</li>
-     <li>分类479</li>
-     <li>分类480</li>
-     <li>分类481</li>
-     <li>分类482</li>
-     <li>分类483</li>
-     <li>分类484</li>
-     <li>分类485</li>
-     <li>分类486</li>
-     <li>分类487</li>
-     <li>分类488</li>
-     <li>分类489</li>
-     <li>分类490</li>
-     <li>分类491</li>
-     <li>分类492</li>
-     <li>分类493</li>
-     <li>分类494</li>
-     <li>分类495</li>
-     <li>分类496</li>
-     <li>分类497</li>
-     <li>分类498</li>
-     <li>分类499</li>
-     <li>分类500</li>
-   </ul>
+  <div id="category">
+    <nav-bar class="nav-bar"><div slot="center">商品分类</div></nav-bar>
+    <div class="content">
+      <tab-menu :categories="categories" @selectItem="selectItem"></tab-menu>
+      <tab-control :titles="['综合', '新品', '销量']"
+                   @itemClick="tabClick"
+                   v-show="isFixed"
+                   class="fixed_tabControl" ref="tab_controlFixed"></tab-control>
+      <scroll id="tab-content" :data="[subcategories,categoryDetail]"
+              :probe-type="3" @scroll="contentScroll">
+        <div>
+          <tab-content-category :subcategories="showSubcategory"></tab-content-category>
+          <tab-control :titles="['综合', '新品', '销量']"
+                       @itemClick="tabClick" ref="tab_control"></tab-control>
+          <tab-content-detail :category-detail="showCategoryDetail"></tab-content-detail>
+        </div>
+      </scroll>
     </div>
   </div>
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
+  import NavBar from "common/navbar/NavBar";
+
+  import TabMenu from "./childComps/TabMenu";
+  import TabContentDetail from "./childComps/TabContentDetail";
+  import TabContentCategory from "./childComps/TabContentCategory";
+
+  import Scroll from "components/common/scroll/Scroll";
+  import TabControl from "components/content/tabControl/TabControl";
+
+  import {getCategory, getSubcategory, getCategoryDetail} from "network/category";
+  import {POP, SELL, NEW} from "@/common/const";
+  import {tabControlMixin} from "@/common/mixin";
+
   export default {
     name: "Category",
+    components: {
+      NavBar,
+      TabMenu,
+      Scroll,
+      TabControl,
+      TabContentDetail,
+      TabContentCategory
+    },
+    mixins:[tabControlMixin],
     data() {
       return {
-        bScroll: null
+        categories:[],
+        subcategories: {},
+        categoryDetail: {
+          'pop': [],
+          'new': [],
+          'sell': []
+        },
+        currentIndex: 0,
+        currentType: 'pop',
+        isFixed: false
       }
     },
     //组件创建完后创建
     created() {
-
+      /*请求分页数据*/
+      this._getCategory()
     },
     mounted() {
-      this.bScroll = new BScroll(this.$refs.aaa,{
-
-      })
+    },
+    methods: {
+      _getCategory() {
+        getCategory().then(res => {
+          /*获取分类数据*/
+          this.categories = res.data.category.list
+          console.log(this.categories);
+          /*初始化每个类别的子数据*/
+          /*for(let i = 0; i < this.categories.length; i++) {
+            this.categoryData[i] = {
+              subcategories: {},
+              categoryDetail: {
+                'pop': [],
+                'new': [],
+                'sell': []
+              }
+            }
+          }*/
+          /*请求第一个分类的数据*/
+          this._getSubcategories(0)
+        })
+      },
+      _getSubcategories(index) {
+        this.currentIndex = index;
+        const mailKey = this.categories[index].maitKey;
+        getSubcategory(mailKey).then(res => {
+          /*获取子分类数据*/
+          this.subcategories = res.data
+          console.log(this.subcategories);
+         /* /!*对象的解构加入*!/
+          this.categoryData = {...this.categoryData}*/
+          this._getCategoryDetail(POP)
+          this._getCategoryDetail(SELL)
+          this._getCategoryDetail(NEW)
+        })
+      },
+      _getCategoryDetail(type) {
+        //1.获取请求的miniWallkey
+        const miniWallkey = this.categories[this.currentIndex].miniWallkey;
+        /*发送请求 传入miniWallKey和type*/
+        getCategoryDetail(miniWallkey, type).then(res => {
+          //把请求的数据保存
+         /* this.categoryData[this.currentIndex].categoryDetail[type] = res*/
+          this.categoryDetail[type] = res
+          console.log(res);
+          /*this.categoryData = {...this.categoryData}*/
+        })
+      },
+      /*点击切换*/
+      selectItem(index) {
+        console.log('点击了'+index);
+        this._getSubcategories(index)
+      },
+      contentScroll(position) {
+        this.isFixed = position.y < -this.$refs.tab_control.$el.offsetTop
+      },
+      tabClick(index) {
+        /*虽然混入了 但是这里要做特定处理*/
+        switch (index) {
+          case 0:
+            this.currentType = POP
+            break
+          case 1:
+            this.currentType = NEW
+            break
+          case 2:
+            this.currentType = SELL
+            break
+        }
+        console.log(this.currentType);
+        this.$refs.tab_control.$data.currentIndex = index
+        this.$refs.tab_controlFixed.$data.currentIndex = index
+      }
+    },
+    computed: {
+      showSubcategory() {
+        if (this.currentIndex === -1) return {}
+        /*return this.categoryData[this.currentIndex].subcategories*/
+        return this.subcategories
+      },
+      showCategoryDetail() {
+        if(this.currentIndex === -1) return []
+        /*return this.categoryData[this.currentIndex].categoryDetail[this.currentType]*/
+        return this.categoryDetail[this.currentType]
+      }
     }
   }
 </script>
 
 <style scoped>
-    .wrapper {
-      background-color: #D81E06;
-      height: 150px;
+  #category {
+    height: 100vh;
+  }
 
-      overflow: hidden;
-      /*overflow-y: scroll;*/
-    }
+  .nav-bar {
+    background-color: var(--color-tint);
+    font-weight: 700;
+    color: #fff;
+  }
 
+  .content {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 44px;
+    bottom: 49px;
+  }
+
+  #tab-content {
+    height: 100%;
+    flex: 1;
+  }
+  .fixed_tabControl {
+    position: fixed;
+    top: 44px;
+    left: 20%;
+    right: 0;
+  }
 </style>

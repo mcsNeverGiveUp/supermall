@@ -66,7 +66,8 @@
         currentType: POP,
         isTabFixed: false,
         tabOffsetTop: 0,
-        showBackTop:false
+        showBackTop:false,
+        saveY: 0
       }
     },
     computed: {
@@ -87,6 +88,8 @@
     },
     activated() {
       this.$refs.hSwiper.startTimer()
+      this.$refs.scroll.scrollTo(0, this.saveY, 0)
+      this.$refs.scroll.refresh()
     },
     deactivated() {
       this.$refs.hSwiper.stopTimer()
@@ -135,9 +138,10 @@
         //决定 tabFixed是否显示
         this.isTabFixed = position.y < -this.tabOffsetTop
 
-
         // 决定backTop是否显示
         this.showBackTop = position.y < -BACKTOP_DISTANCE
+
+        this.saveY = position.y
       },
       loadMore() {
         this.getHomeProducts(this.currentType)

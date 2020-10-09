@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <keep-alive>
-     <router-view></router-view>
+    <keep-alive exclude="Detail">
+     <router-view :key="$route.query.iid"></router-view>
     </keep-alive>
     <main-tab-bar></main-tab-bar>
   </div>

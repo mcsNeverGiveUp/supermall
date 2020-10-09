@@ -1,12 +1,12 @@
 <template>
   <div class="goodsItem" @click="goToDetail">
-    <img :src="goodsItem.show.img" :key="goodsItem.acm" alt="" @load="imageLoad">
+    <img :src="goodsItem.img" :key="goodsItem.acm" alt="" @load="imageLoad">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
-      <span class="orgPrice">{{goodsItem.orgPrice}}</span>
+      <span class="orgPrice">¥{{goodsItem.orgPrice}}</span>
       <span class="price">¥{{goodsItem.price}}</span>
       <div>
-      <span class="collect">{{goodsItem.cfav}}</span>
+        <span class="collect">{{goodsItem.cfav}}</span>
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: "GoodsListItem",
+    name: "TabGoodsItem",
     props: {
       goodsItem: {
         type: Object,

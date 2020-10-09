@@ -1,12 +1,12 @@
 <template>
   <div class="goodsItem" @click="goToDetail">
-    <img :src="goodsItem.show.img" :key="goodsItem.acm" alt="" @load="imageLoad">
+    <img :src="goodsItem.image" :key="goodsItem.acm" alt="" @load="imageLoad">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
-      <span class="orgPrice">{{goodsItem.orgPrice}}</span>
-      <span class="price">¥{{goodsItem.price}}</span>
+      <span class="orgPrice">¥{{goodsItem.price}}</span>
+      <span class="price">¥{{goodsItem.discountPrice}}</span>
       <div>
-      <span class="collect">{{goodsItem.cfav}}</span>
+        <span class="collect">{{goodsItem.cfav}}</span>
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: "GoodsListItem",
+    name: "DetailGoodsListItem",
     props: {
       goodsItem: {
         type: Object,
@@ -28,7 +28,8 @@
         this.$bus.$emit('refresh','图片加载完毕!')
       },
       goToDetail() {
-        let iid = this.goodsItem.iid
+        let iid = this.goodsItem.item_id
+        console.log('推荐商品的id:'+iid);
         this.$router.push({path:'/detail', query:{iid}})
       }
     }
@@ -36,12 +37,10 @@
 </script>
 
 <style scoped>
-
   .goodsItem {
     padding-bottom: 60px;
     position: relative;
-
-    width: 48%;
+    width: calc(50% - 7.5px);
   }
   .goodsItem img {
     width: 100%;
@@ -92,5 +91,4 @@
     height: 14px;
     background: url("~assets/img/common/collect.svg") 0 0/14px 14px;
   }
-
 </style>
